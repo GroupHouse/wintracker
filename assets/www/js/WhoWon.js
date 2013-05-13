@@ -282,6 +282,7 @@ $("#PersonSelection").on('click', ':checkbox', function(){
   
 function saveaWin()
 {
+console.write("Size when entering " + names.length);
 	players.length = 0;
     names.length = 0;
     winnernames.length = 0;
@@ -289,6 +290,8 @@ function saveaWin()
 	var sList = "";
 	var j = 0;
 	var id;
+	console.write("Size after clearing" + names.length);
+	
 	i = 0; //test
 	$('input[type=checkbox]').each(function () {
     	var sThisVal = (this.checked ? "1" : "0");
@@ -307,6 +310,7 @@ function saveaWin()
     				players[i] =  n[1]; 		
     				console.log("Player: " + players[i]);
   					names[i] = this.parentNode.firstChild.innerHTML; //Capture the name of the person so we can display in the confirm pop up
+    				console.write("Size: " + names.length);
     				i++;
     			}
     			
@@ -322,6 +326,7 @@ function saveaWin()
     		}
     		
 		});
+		console.write("Size before confirm" + names.length;
 		//Once we have the arrays then we need to confirm the players and the winners
 	showConfirm(names, winnernames);		
 }

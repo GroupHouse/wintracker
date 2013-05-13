@@ -28,6 +28,7 @@ import com.facebook.model.GraphUser;
 import com.facebook.widget.WebDialog;
 import com.facebook.widget.WebDialog.OnCompleteListener;
 
+@SuppressWarnings("deprecation")
 public class ConnectPlugin extends Plugin {
 	
 	private static final String FEED_DIALOG = "feed";
