@@ -1,0 +1,447 @@
+html {
+	height: 100%;
+}
+*
+
+{
+	font-family:sans-serif;	
+	font-size: 14px;
+	color: #b73300;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+#busy {
+	display:none;
+	position: absolute;
+	top: 50%;
+ 	left: 50%;
+	margin-left: -65px;
+	margin-top: -31px;
+	color: #FFFFFF;
+	font-size: 24px;	
+	z-index:6;
+	background-color: #000000;
+	opacity:0.5;
+ 	width:100px;
+	height:32px;
+	padding: 30px;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+	
+}
+#wrapper
+{
+	position: absolute;
+height:100%;
+left:0px;
+right:50%;
+
+	
+}
+#firsttime
+{
+
+	position: relative;
+	border:3px solid #000000;	
+	width:180px;
+	color: #FFFFFF;
+	top:10%;
+	left:40%;
+	font-size: 24px;	
+	z-index:6;
+	background-color: #ffffff;
+	padding: 30px;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+.content
+{
+	min-height: 100%;
+	position: relative;
+	overflow: auto;
+	z-index: 0; 
+}
+
+
+#ItemSelectionNoHead
+{
+	color: #b73300; background-color: white; 
+	list-style-type: none;
+	padding-top:30px;
+	 padding-left:10px;
+}
+#ItemSelectionNoHead > li
+{
+
+	text-align: left;
+	padding-left: 20px;
+	margin-left: -10px;
+ 	border-bottom: 1px solid #000;
+	height:120px;
+ 	padding-top: 40px;
+ 	padding-bottom: 10px;
+ 	font-size: x-large;	
+}
+
+#ItemSelection
+{
+	color: #b73300; background-color: white; 
+	list-style-type: none;
+	padding-top:120px;
+	padding-left:10px;
+}
+#ItemSelection > li
+{
+	text-align: left;
+	padding-left: 20px;
+	margin-left: -10px;
+ 	border-bottom: 1px solid #000;
+	height:120px;
+ 	padding-top: 10px;
+ 	padding-bottom: 10px;	
+}
+
+li .list-icon {
+	float: left;
+	margin-right: 12px;
+	display: block;
+	padding-top: 4px;
+	height: 75px; /* TODO: use 100x100 pics instead of scaling */ 
+}
+ 
+li .buy
+{
+	float:right;
+    display: block;
+	position:relative;
+	top:5px;
+	padding-right:10px;		
+}
+#ItemSelection li a {
+    display: block;
+    text-decoration: none;
+    padding-top: 5px;
+ 	padding-bottom: 5px;
+ 	font-size: x-large;
+}
+
+#HomeRedSide
+{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 15%; 
+	background-color: #b73300;
+	min-height: 100%;
+	float:left;
+	margin: auto;
+
+}
+#HomeMenu
+{
+ 	border: 0px solid #000;
+ 	margin: 0em;
+ 	width: 80%;
+ 	padding: 0px;
+ 	float:left;
+}
+#HomeMenu > li
+{
+ 
+ 	border-bottom: 1px solid #000;
+ 	margin: 0em;
+ 	width: 80%;
+ 	padding: 15px;
+ 	float:left;
+ 	font-size: xx-large;
+}
+#CommonAll
+{
+	
+	position: relative; 
+	top:-56px;
+	
+}
+#allgames
+{
+    width: 50%; 
+    position: relative; 
+    float: left; 
+    top:27px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	height:31px;
+	padding-top:15px;	
+	display: inline-block;
+	border-bottom: 9px solid #b73300;
+			z-index: 2; 
+	
+}
+
+#commongames
+{
+    width: 50%;
+    position: relative;          
+    float: right; 
+	background: #ffffff; /* for non-css3 browsers */
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	top:82px;
+	height:40px;
+	padding-top:15px;	
+	display: inline-block;
+	border-left: 1px solid #b73300;
+		z-index: 2; 
+}
+
+
+
+.PageNameHeader
+{
+	position:  absolute;
+ 	text-align: center;
+ 	background: #666666; /* for non-css3 browsers */
+	background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#666666), color-stop(.6,#333));
+	color: #FFFFFF;
+	top: 0px; 
+	font-size:x-large;
+	height: 40px;
+	width: 100%;
+	border-bottom: solid 1px #444444;
+	position: fixed;
+		z-index: 10; 
+
+
+}
+
+.PageNameHeader > h1 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+	display: block; 
+	width:100%;
+	
+}
+.PageNameHeader > .nav {
+	position: absolute;
+	left: 0px;
+	padding-left:10px
+	height:70%;
+	
+	padding-top: 12px;
+	padding-right: 12px;
+	border-right: solid 1px #333333;
+text-shadow: 0px 2px 3px #666;
+
+
+
+	display: block;
+width: 65px;
+height: 20px;
+background: #B73300;
+padding: 10px;
+text-align: center;
+color: white;
+font-weight: bold;
+}
+.PageNameHeader > .nav2 {
+
+	float:right;
+	height:70%;
+	padding-top: 12px;
+	padding-left: 12px;
+	padding-right: 12px;
+	border-left: solid 1px #333333;
+	text-shadow: 0px 2px 3px #666;
+
+
+
+	display: block;
+width: 75px;
+height: 22px;
+background: #B73300;
+padding: 10px;
+text-align: center;
+font-weight: bold;
+top:-41px;
+position: relative;
+}
+.PageNameHeader > .addgame {
+
+	float:right;
+	height:70%;
+	padding-top: 12px;
+	padding-left: 12px;
+	padding-right: 12px;
+	border-left: solid 1px #333333;
+	text-shadow: 0px 2px 3px #666;
+
+
+
+	display: block;
+width: 75px;
+height: 22px;
+background: #B73300;
+padding: 10px;
+text-align: center;
+font-weight: bold;
+top:-41px;
+position: relative;
+}
+.PageNameHeader a { 
+	text-decoration:none;
+	color: #FFFFFF;
+}
+
+.markedplayer
+{
+	
+
+    height: 13px;
+    padding: 0;
+    margin-right:30px;
+    margin-bottom:30px;
+    float:right;
+    position: relative;
+    top: -20px;
+    *overflow: hidden;
+    color:#FFFFFF;
+    
+   
+}
+.markedwinner{
+	
+	
+    height: 13px;
+    padding: 0;
+    margin-right:60px;
+    margin-bottom:30px;
+    float:right;
+    position: relative;
+    top: -20px;
+    *overflow: hidden;
+	color:#FFFFFF;
+	
+}
+.played
+{
+	
+	font-family:sans-serif;	
+font-size: 8px;
+color: #b73300;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	
+}
+
+#PlayerHeader
+{
+	width:100%;
+	position:relative;
+	top:-29px;
+	background-color: black;
+	position:relative;
+	float:left;
+		border-left:10px;
+}
+
+#AddAGame{
+
+	visibility: hidden;
+	text-align: center;
+}
+#stickyalt
+{
+	width:100%;
+	position:relative;
+	top:41px;
+
+	background-color: black;
+	position:relative;
+	float:left;
+		border-left:10px;
+			text-align: center;
+		
+}
+#sticky
+{
+	width:100%;
+	position:relative;
+	top:-29px;
+	height:35px;
+	background-color: black;
+	position:relative;
+	float:left;
+	
+		border-left:10px;
+}
+#sticky.stick {
+    position: fixed;
+    top: 41px;
+    z-index: 10000;
+    border-radius: 0 0 0.5em 0.5em;
+}
+.stick{
+	  position: fixed;
+    top: 41px;
+    z-index: 10000;
+    border-radius: 0 0 0.5em 0.5em;
+	
+}
+
+#Name
+{
+	width:50%;
+	background-color: black;
+	color:white;
+	float:left;
+	text-decoration: bold;
+	padding-top:4px;
+	padding-bottom:4px;
+
+}
+
+#winner
+{
+	position:relative;
+	width:50%;
+	background-color: black;
+	color:white;
+	float:right;
+	text-align: right;
+	padding-top:4px;
+	padding-bottom:4px;	
+
+}
+#play
+{
+	display: inline; 
+	color:white;
+	padding-right:34px;	
+	text-decoration: bold;
+	padding-top:4px;
+	padding-bottom:4px;
+	font-weight: bolder;
+
+}
+#win
+{
+	display: inline; 
+color:white;
+padding-right:10px;	
+font-weight: bolder;
+
+	padding-top:4px;
+	padding-bottom:4px;
+}		
