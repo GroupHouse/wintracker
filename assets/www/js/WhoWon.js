@@ -282,7 +282,7 @@ $("#PersonSelection").on('click', ':checkbox', function(){
   
 function saveaWin()
 {
-console.write("Size when entering " + names.length);
+console.log("Size when entering " + names.length);
 	players.length = 0;
     names.length = 0;
     winnernames.length = 0;
@@ -290,7 +290,7 @@ console.write("Size when entering " + names.length);
 	var sList = "";
 	var j = 0;
 	var id;
-	console.write("Size after clearing" + names.length);
+	console.log("Size after clearing" + names.length);
 	
 	i = 0; //test
 	$('input[type=checkbox]').each(function () {
@@ -310,7 +310,7 @@ console.write("Size when entering " + names.length);
     				players[i] =  n[1]; 		
     				console.log("Player: " + players[i]);
   					names[i] = this.parentNode.firstChild.innerHTML; //Capture the name of the person so we can display in the confirm pop up
-    				console.write("Size: " + names.length);
+    				console.log("Size: " + names.length);
     				i++;
     			}
     			
@@ -326,7 +326,7 @@ console.write("Size when entering " + names.length);
     		}
     		
 		});
-		console.write("Size before confirm" + names.length;
+		console.log("Size before confirm" + names.length);
 		//Once we have the arrays then we need to confirm the players and the winners
 	showConfirm(names, winnernames);		
 }
@@ -367,6 +367,7 @@ for (var i=0; i< names.length; i++)
 	  			text1 += " and ";
 	  		}
 	  }
+	$('input:checkbox').removeAttr('checked');
 	text1 += " just played " + document.getElementById('gamename').innerHTML + " , guess who won!";
 	publishStory(text1); //Send to publish
     openPage('root');    //Go back to root
@@ -377,11 +378,13 @@ for (var i=0; i< names.length; i++)
 
 function onConfirm(button) 
 {   
+
 	console.log("button: " +button);
 	if (button == 2)
 	{
 
 	}else{
+		
 			InsertPlayer(players, Date(), winners);
 	}
 }
@@ -422,7 +425,8 @@ function InsertPlayer(players ,date, winners)
 			navigator.notification.confirm('Wins and Losses Recorded',  alertDismissed,  'Roger Roger',   'Acknowledge');
 
 		        }
-	       });					
+	       });			
+	       		
 }
 
 
